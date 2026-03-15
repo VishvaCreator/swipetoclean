@@ -251,17 +251,14 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.site-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(145deg, var(--gold-light), var(--gold));
-  border-radius: 50%;
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
-  box-shadow: 0 4px 16px var(--gold-soft);
+.site-logo-img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 0.75rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
 }
 
 .site-title {
@@ -504,14 +501,24 @@ body {
   text-align: center;
 }
 
-.screenshot-item img {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
+.screenshot-img-wrap {
+  overflow: hidden;
   border-radius: 20px;
   border: 1px solid var(--border);
   box-shadow: 0 8px 32px var(--card-shadow);
+  max-width: 280px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 19.5;
+  background: var(--surface);
+}
+
+.screenshot-img-wrap img {
+  width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  /* Hide the top status bar (time, battery, signal) */
+  object-position: 0 -10%;
 }
 
 .screenshot-item figcaption {
