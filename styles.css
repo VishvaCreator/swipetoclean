@@ -144,6 +144,12 @@ body {
   margin-top: 0;
 }
 
+.content-page h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem 0;
+}
+
 .content-page p, .content-page ul {
   color: var(--text-muted);
   font-size: 0.95rem;
